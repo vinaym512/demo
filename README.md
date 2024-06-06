@@ -21,7 +21,7 @@ This demo is built using the Playwright framework for both web and API tests.
    - Open the project in VSCode or your preferred IDE.
 
 3. **Install Node.js**:
-   - If Node.js is not already installed on your computer, download and install it from the [official Node.js website](https://nodejs.org/).
+   - If Node.js (greater than v18.0) is not already installed on your computer, download and install it from the [official Node.js website](https://nodejs.org/).
 
 4. **Install Project Dependencies**:
    - Open a terminal in your IDE or use the terminal in your operating system.

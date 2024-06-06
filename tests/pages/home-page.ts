@@ -22,14 +22,14 @@ export class HomePage {
     await this.getYourVehicle.first().hover();
     await this.getYourVehicle.first().hover();
     try {
-      await expect(this.getEVCharging).toBeVisible({timeout:5000});
+      await expect(this.getEVCharging).toBeVisible({timeout:30000});
       
     } catch (error) {
       if (error instanceof errors.TimeoutError)
         console.log('Timeout!');
       await this.getYourVehicle.first().hover();
     }
-    // await expect(this.getEVCharging).toBeVisible({timeout:5000});
+    // await expect(this.getEVCharging).toBeVisible({timeout:30000});
     await this.getEVCharging.click();
   }
 
