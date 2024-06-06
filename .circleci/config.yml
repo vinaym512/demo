@@ -1,0 +1,32 @@
+---
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/node:20.14.0
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Install playwright browsers
+          command: npx playwright install --with-deps
+      - run:
+          name: Run tests
+          command: npx playwright test
+      - run:
+          name: Generate Playwright Report
+          command: npx playwright show-report
+      - run:
+          name: Echo path
+          command: cd playwright-report && ls
+      - store_artifacts:
+          path: temperature.txt
+      - store_artifacts:
+          path: /home/circleci/project/playwright-report
+          destination: playwright-report
+workflows:
+  test_demo:
+    jobs:
+      - test
