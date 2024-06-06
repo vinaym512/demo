@@ -18,9 +18,6 @@ jobs:
       - run:
           name: Generate Playwright Report
           command: npx playwright show-report
-      - run:
-          name: Echo path
-          command: cd playwright-report && ls
       - store_artifacts:
           path: temperature.txt
       - store_artifacts:

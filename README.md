@@ -4,45 +4,68 @@
 
 This demo is built using the Playwright framework for both web and API tests.
 
-## Prerequisites
+### Steps to Set Up the Project on a Computer
 
-To run tests on a Chrome browser in headed mode, the latest Chrome browser should be installed on your computer. Other browsers can be run in headless mode after installing the dependencies.
+1. **Clone the Repository**:
+   - Open your terminal.
+   - Clone the demo project from the repository:
+     ```bash
+     git clone https://github.com/<username>/<repository>.git
+     ```
+   - Navigate to the project directory:
+     ```bash
+     cd <repository>
+     ```
 
-## Steps to Make the Project Ready
+2. **Open the Project in an IDE**:
+   - Open the project in VSCode or your preferred IDE.
 
-1. Clone the Demo project from the repository.
-2. Open it in VSCode (you can use other IDEs as well).
-3. Open a terminal and navigate to the project directory.
-4. Install the dependencies:
-    ```bash
-    npm install
-    ```
+3. **Install Node.js**:
+   - If Node.js is not already installed on your computer, download and install it from the [official Node.js website](https://nodejs.org/).
 
-## Steps to Run the Tests
+4. **Install Project Dependencies**:
+   - Open a terminal in your IDE or use the terminal in your operating system.
+   - Navigate to the project directory if not already there.
+   - Install the necessary project dependencies using npm:
+     ```bash
+     npm install
+     ```
+
+5. **Install Playwright Browsers**:
+   - Install the required browsers for Playwright:
+     ```bash
+     npx playwright install --with-deps
+     ```
+
+### Steps to Run the Tests
 
 1. **Run All Tests**:
-    ```bash
-    npx playwright test
-    ```
+   - In the terminal, enter the following command to run all tests:
+     ```bash
+     npx playwright test
+     ```
 
-2. **Run Individual Test by Test File Name**:
-    ```bash
-    npx playwright test getTemperatureApi.spec.ts
-    ```
+2. **Run Individual Tests**:
+   - To run an individual test by its file name, use the following command:
+     ```bash
+     npx playwright test <testFileName>.spec.ts
+     ```
+   - Example:
+     ```bash
+     npx playwright test getTemperatureApi.spec.ts
+     ```
 
 3. **Display HTML Report**:
-    ```bash
-    npx playwright show-report
-    ```
+   - After running the tests, display the HTML report with:
+     ```bash
+     npx playwright show-report
+     ```
 
-## Note
+### Notes
 
-- **Bonus/Optional: Scenario B** part of the UI test is not converted to the POM (Page Object Model) yet. This test fails due to expected screenshot comparison discrepancies. However, test will still run to completion, validating all other requirements 
+- **Optional: Scenario B** part of the UI test is not yet converted to the Page Object Model (POM). Also, this test fails due to expected screenshot comparison discrepancies. However, this test will still run to completion, validating all other requirements.
+- **CircleCI pipeline** I have created a CI/CD pipeline workflow using CircleCI, and the configuration file is included in the repository. To provide access to the pipeline, you need to be invited as a collaborator.
 
-## Learn More
+### Learn More
 
 For more information, visit the [Playwright documentation](https://playwright.dev/).
-
----
-
-This `README.md` provides clear instructions for setting up and running the project, ensuring users can easily follow along to get started with the Playwright demo.
